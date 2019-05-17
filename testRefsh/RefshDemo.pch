@@ -1,0 +1,35 @@
+//
+//  RefshDemo.pch
+//  RefshDemo
+//
+//  Created by weiguang on 2019/5/17.
+//  Copyright © 2019 duia. All rights reserved.
+//
+
+#ifndef RefshDemo_pch
+#define RefshDemo_pch
+
+
+#define SCREEN_W [UIScreen mainScreen].bounds.size.width
+#define SCREEN_H [UIScreen mainScreen].bounds.size.height
+#define TOP 200 //顶部预留
+
+#define kStatusBarHeight (is_IPHONEX ? 44 : 20)
+#define kNavigationBarHeight (is_IPHONEX?88:64)
+
+#define is_IPHONEX (([[UIScreen mainScreen] bounds].size.height-812)?NO:YES)
+
+
+#define UIColorFromHex(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define UIColorFromHexA(rgbValue,a) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
+
+
+
+#endif /* RefshDemo_pch */
